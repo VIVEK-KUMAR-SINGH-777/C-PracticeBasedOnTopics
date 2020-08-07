@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharpBasics
+{
+    //Inheritance COncept Implemented 
+    class Base
+    {
+        public string name = "Base";
+        protected int id = 5323;
+        // .......................... constructor Implementation .......................
+        // ............................Default Constructor ................................
+
+    }
+
+    class Derived : Base
+    {
+        public void info()
+        {
+            Console.WriteLine("This is Derived class");
+            Console.WriteLine("Members inherited");
+            Console.WriteLine(this.name);
+            Console.WriteLine(this.id);
+            Console.ReadLine();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // .......................................object creatuin for Derived class ..........................................
+            var derived = new Derived();
+            derived.info();
+        }
+       
+    }
+}
