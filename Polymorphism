@@ -34,4 +34,44 @@ namespace CSharpBasics
 }
 
 ............................................................RUNTIME POLYMORPHISM.........................................................................
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace CSharpBasics
+{
+    public class clsShape
+    {
+    public int _radius = 5;
+        public virtual double getArea()
+        {
+            return 0;
+        }
+    }
+    public class clsCircle : clsShape
+    {
+        public override double getArea()
+        {
+            return 3.14 * _radius * _radius;
+        }
+    }
+    public class clsSphere : clsShape
+    {
+        public override double getArea()
+        {
+            return 4 * 3.14 * _radius * _radius;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            clsShape objShape1 = new clsCircle();
+            clsShape objShape2 = new clsSphere();
+            Console.WriteLine("Radius of a Cirle is - {0}", objShape1.getArea());
+            Console.WriteLine("Radius of a Sphere is - {0}", objShape2.getArea());
+        }
+    }
+}
