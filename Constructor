@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharpBasics
+{
+    class MyFriend
+    {
+        private DateTime born;
+        private string name;
+
+        public MyFriend(string name, DateTime born)
+        {
+            this.name = name;
+            this.born = born;
+        }
+
+        public void Info()
+        {
+            Console.WriteLine("{0} Date Of Birth Is:: {1}",
+                this.name, this.born.ToShortDateString());
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var name = "Vivek";
+            var born = new DateTime(1996, 3, 20);
+
+            var friend = new MyFriend(name, born);
+            friend.Info();
+            Console.ReadLine();
+
+        }
+    }
+}
+
