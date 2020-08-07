@@ -11,8 +11,7 @@ namespace CSharpBasics
     {
         public string name = "Base";
         protected int id = 5323;
-        // .......................... constructor Implementation .......................
-        // ............................Default Constructor ................................
+
 
     }
 
